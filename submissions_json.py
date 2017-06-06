@@ -1,0 +1,77 @@
+pprint.pprint(vars(submissions))
+
+
+
+{'_comments_by_id': {},
+ '_fetched': False,
+ '_flair': None,
+ '_info_params': {},
+ '_mod': None,
+ '_reddit': <praw.reddit.Reddit object at 0x02122330>,
+ 'approved_by': None,
+ 'archived': True,
+ 'author': Redditor(name='robeendey'),
+ 'author_flair_css_class': None,
+ 'author_flair_text': None,
+ 'banned_by': None,
+ 'brand_safe': True,
+ 'can_gild': True,
+ 'clicked': False,
+ 'comment_limit': 2048,
+ 'comment_sort': 'best',
+ 'contest_mode': False,
+ 'created': 1479876888.0,
+ 'created_utc': 1479848088.0,
+ 'distinguished': None,
+ 'domain': 'self.learnprogramming',
+ 'downs': 0,
+ 'edited': False,
+ 'gilded': 2,
+ 'hidden': False,
+ 'hide_score': False,
+ 'id': '5ed4xg',
+ 'is_self': True,
+ 'likes': None,
+ 'link_flair_css_class': None,
+ 'link_flair_text': None,
+ 'locked': False,
+ 'media': None,
+ 'media_embed': {},
+ 'mod_reports': [],
+ 'name': 't3_5ed4xg',
+ 'num_comments': 753,
+ 'num_reports': None,
+ 'over_18': False,
+ 'permalink': '/r/learnprogramming/comments/5ed4xg/ive_taught_30000_students_how_to_code_now_im/',
+ 'quarantine': False,
+ 'removal_reason': None,
+ 'report_reasons': None,
+ 'saved': False,
+ 'score': 16597,
+ 'secure_media': None,
+ 'secure_media_embed': {},
+ 'selftext': "I've decided to make my course on complete full-stack web "
+             'development [free forever, here!](http://upskillcourses.com). '
+             "It's a massive amount of content. Please let me know what you "
+             'think of the course!',
+ 'selftext_html': '<!-- SC_OFF --><div class="md"><p>I&#39;ve decided to make '
+                  'my course on complete full-stack web development <a '
+                  'href="http://upskillcourses.com">free forever, here!</a>. '
+                  'It&#39;s a massive amount of content. Please let me know '
+                  'what you think of the course!</p>\n'
+                  '</div><!-- SC_ON -->',
+ 'spoiler': False,
+ 'stickied': False,
+ 'subreddit': Subreddit(display_name='learnprogramming'),
+ 'subreddit_id': 't5_2r7yd',
+ 'subreddit_name_prefixed': 'r/learnprogramming',
+ 'subreddit_type': 'public',
+ 'suggested_sort': None,
+ 'thumbnail': '',
+ 'title': "I've taught 30,000 students how to code. Now I'm offering my course "
+          'for free, forever.',
+ 'ups': 16597,
+ 'url': 'https://www.reddit.com/r/learnprogramming/comments/5ed4xg/ive_taught_30000_students_how_to_code_now_im/',
+ 'user_reports': [],
+ 'view_count': None,
+ 'visited': False}
