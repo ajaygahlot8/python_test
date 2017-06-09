@@ -3,5 +3,5 @@ Test python repo.
 
 
 Todo
--Eclipse in 28 minutes
--25 steps shit
+-Eclipse in 28 minutes///done
+-25 steps shit//done
