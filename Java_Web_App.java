@@ -48,6 +48,17 @@ ${batsmanName}
   context.setAttribute("name","ajay");
   context.getAttribute("name")
 
+10) initParams in servlet
+@WebServlet(urlPatterns={"/home"},
+initParams={@WebInitParam={name="username", value="ajay"}}) //here we are setting the parameters
+
+//to get the parameters we have to get config Object
+
+this.getServletConfig().getInitParameter("username");
+
+
+
+
 12)   1) Web Server > Web Container > Web Application
 
     2) Tomcat is servlet container . Web Container or Servlet Container or Servlet Engine :
