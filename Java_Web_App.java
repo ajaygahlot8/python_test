@@ -54,7 +54,7 @@ initParams={@WebInitParam={name="username", value="ajay"}}) //here we are settin
 
 //to get the parameters we have to get config Object
 
-this.getServletConfig().getInitParameter("username");
+this.getServletConfig().getInitParameter("username"); //you can do same shit in web.xml using servlet tag
 
 
 
@@ -84,7 +84,7 @@ this.getServletConfig().getInitParameter("username");
          A web container implements the web component contract of the Java EE architecture, specifying a runtime environment for web components
          that includes security, concurrency, lifecycle management, transaction, deployment, and other services.
 
-      EXAMPLE: JBOS, APACHETOMCAT are web containers who are part or component of web server and servers and maintains servlets
+      EXAMPLE: JBOSS, APACHETOMCAT are web containers who are part or component of web server and servers and maintains servlets
 
       6) life cycle of Servlet
       The following is a typical user scenario of these methods.
@@ -106,13 +106,50 @@ this.getServletConfig().getInitParameter("username");
             The service() method is called for each HTTP request.
           The container may, at some point, decide to unload the servlet from its memory.
           ``The algorithms by which this decision is made are specific to each container.
-          The container calls the servlet's destroy() method to relinquish any resources such as file handles that are allocated for the servlet; important data may be saved to a persistent store.
+          The container calls the servlet's destroy() method to relinquish any resources such as file handles that are allocated for the servlet;
+           important data may be saved to a persistent store.
               The memory allocated for the servlet and its objects can then be garbage collected.
 
 
+13) jsp
+  //every jsp file gets converted into a servlet class file by tomcat and you can view it
+  //inside tomcat folder > work >catalina>localhost> project name > org>net .......
+ jsp directives
+ <%@ page import="java.Date" %> //to import java classes into jsp
+ <%@ include file="/new_file.jsp" %> //to import other jsp files which has html content
+ <%! int add(){} %> // here you declare methods
+ <% int i = 10%> //here you write java code
+ <%= i %> //here you use the value of i
+
+ <%
+request.getParameter();// we can access request object because this code is already written iside Service method of JSP java file
+session.getAttribute();//we dont have to use request.getSession(); in jsps because session object is given to us
+application.getAttribute(); //this is ServletContext and we dont have to write request.getServletContext(); inste4ad just use application
+pageContext.setAttribute("username ","ajay",PageContext.APPLICATION_SCOPE);//you can access all type of scopes with pageContext
+
++-------------+------------------------------------------------------+
+| Scope       | Description                                          |
++-------------+------------------------------------------------------+
+| page        | Objects can be accessed only within the JSP page     | //Since every page and every request has a different PageContext object,
+|             | in which they are referenced.                        | //this indicates that the bean is not shared and thus a new bean will be created for each request.
++-------------+------------------------------------------------------+
+| request     | Objects can be accessed within all the pages that    |
+|             | serve the current request. These include pages       |
+|             | that are forwarded to, and included in, the original |
+|             | JSP page to which the request was routed.            |
++-------------+------------------------------------------------------+
+| session     | Objects can only be accessed within the JSP pages    |
+|             | accessed within the session for which the objects    |
+|             | are defined.                                         |
++-------------+------------------------------------------------------+
+| application | Application scope objects can be accessed by all     |
+|             | JSP pages in a given context.                        |
++-------------+------------------------------------------------------+
 
 
-
+ %>
+14) content type
+//it states that when respose comes to browser then how to format the response example html ,json , ...
 
 
 
