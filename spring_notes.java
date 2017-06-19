@@ -27,10 +27,20 @@ class Alpha{
   @Autowired
   @Qualifier(value="goodMorning") //either you can give the class name here in camel case or as reference name
   InterfaceBeta goodMorning //if ypu have more than 2 classes implementing interface that you are autowiring
-                            //then you can either specify name of the class as reference name 
+                            //then you can either specify name of the class as reference name
 
 }
 
 class GoodMorning implements InterfaceBeta{
 
+}
+
+4) dependency injection
+
+Class First{
+
+  @Autowired
+  Second sub;//it can be a interface or a class but if its an interface then spring will find the implementation a
+            // and prvoide u the object to use it directly
+            //in future if you change implementation of class Second then u dont have to do any change in Class First
 }
