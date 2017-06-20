@@ -39,8 +39,51 @@ class GoodMorning implements InterfaceBeta{
 
 Class First{
 
-  @Autowired
+  @Autowired //spring will find the implementation of this class and provide u the object
   Second sub;//it can be a interface or a class but if its an interface then spring will find the implementation a
             // and prvoide u the object to use it directly
             //in future if you change implementation of class Second then u dont have to do any change in Class First
 }
+Real life scenario :
+lets suppose u need to test ur spring application then you can easily change the implementation class for Second
+in the configuration(spring.xml) setting and for testing u can use the  mock or stub instead of real implementation
+the mock or stub will be initialized with the dummy data so that test can run
+
+Inversion of control :
+Earlier the control was with Class First but using dependency injection control is with spring hence Inversion of control
+
+5) Spring singleton bean //default scope for bean
+  generally singleton pattern means one instance per classloader or jvm
+  in spring singleton means one instance of bean per application context/container
+
+6)  prototype scope for bean
+if you want to create more than 1 instance for any bean then you have to specify the scope as prototype
+a new instance is created every time a request for bean is made
+
+<bean id="state" class="com.org.Users" scope="prototype">
+
+
+@Component
+@Scope("singleton")//here you can specify the scope
+public class TennisCoach implements Coach {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
