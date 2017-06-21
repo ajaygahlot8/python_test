@@ -154,7 +154,13 @@ pageContext.setAttribute("username ","ajay",PageContext.APPLICATION_SCOPE);//you
 14) content type
 //it states that when respose comes to browser then how to format the response example html ,json , ...
 
+15) request dispatcher
+  response.sendRedirect("sucess.jsp"); //when we do this a whole new request is sent from browser side .
+                                      //so if you want to send data to next request you have to use
+                                      //session scope.
 
+  RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
+  dispatcher.forward(request,response); // here the request is sent from server side only not from browser
 
 
 
