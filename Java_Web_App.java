@@ -148,6 +148,9 @@ pageContext.setAttribute("username ","ajay",PageContext.APPLICATION_SCOPE);//you
 
 
  %>
+
+ servlet config is use to set initParameters we can do that in web.xml even for jsp file also or inside web.xml using simple servlet class
+ or using annotations we can set initParameters
 14) content type
 //it states that when respose comes to browser then how to format the response example html ,json , ...
 
