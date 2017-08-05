@@ -1,7 +1,4 @@
-# python_test
-Test python repo.
+#Trend analysis from reddit.
 
-
-Todo
--Eclipse in 28 minutes///done
--25 steps shit//done
+Using PRAW api .
+Fwtching data from Reddit and converting and analysing data into charts
