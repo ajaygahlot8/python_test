@@ -71,8 +71,20 @@ public class TennisCoach implements Coach {
 
 
 
+7) spring notes from Spring in application
 
+  1) “Dependency injection involves giving an object its dependencies as opposed to an object having to acquire those dependencies on its own.”
 
+Excerpt From: iBooks.
+
+  2) “Spring employs four key strategies:
+
+      “Lightweight and minimally invasive development with POJOs
+      Loose coupling through DI and interface orientation
+      Declarative programming through aspects and common conventions
+      Eliminating boilerplate code with aspects and templates”
+
+Excerpt From: iBooks.
 
 
 

@@ -1,21 +1,64 @@
-import praw
-import pprint
-
-def bot_login():
-    r = praw.Reddit(
-        username = "cuzok",
-        password = "reddit",
-        client_id = "yl8xU18CjRzF5w",
-        client_secret = "U4svRaf5cd8lOe6p92aX6MAvNaA",
-        user_agent = "cuzoks first reddit bot v1.0")
-    return r
-
-r = bot_login()
-print r
-
-subreddit = r.subreddit("learnprogramming")
-print subreddit
-
-for submissions in subreddit.hot(limit=1):
-    print submissions.title
-    pprint.pprint(vars(submissions))
+{'_comments_by_id': {},
+ '_fetched': False,
+ '_flair': None,
+ '_info_params': {},
+ '_mod': None,
+ '_reddit': <praw.reddit.Reddit object at 0x10323b190>,
+ 'approved_by': None,
+ 'archived': False,
+ 'author': Redditor(name='michael0x2a'),
+ 'author_flair_css_class': None,
+ 'author_flair_text': None,
+ 'banned_by': None,
+ 'brand_safe': True,
+ 'can_gild': True,
+ 'clicked': False,
+ 'comment_limit': 2048,
+ 'comment_sort': 'best',
+ 'contest_mode': False,
+ 'created': 1490598454.0,
+ 'created_utc': 1490569654.0,
+ 'distinguished': u'moderator',
+ 'domain': u'self.learnprogramming',
+ 'downs': 0,
+ 'edited': 1490590296.0,
+ 'gilded': 0,
+ 'hidden': False,
+ 'hide_score': False,
+ 'id': u'61oly8',
+ 'is_self': True,
+ 'likes': None,
+ 'link_flair_css_class': None,
+ 'link_flair_text': None,
+ 'locked': True,
+ 'media': None,
+ 'media_embed': {},
+ 'mod_reports': [],
+ 'name': u't3_61oly8',
+ 'num_comments': 16,
+ 'num_reports': None,
+ 'over_18': False,
+ 'permalink': u'/r/learnprogramming/comments/61oly8/new_read_me_first/',
+ 'quarantine': False,
+ 'removal_reason': None,
+ 'report_reasons': None,
+ 'saved': False,
+ 'score': 492,
+ 'secure_media': None,
+ 'secure_media_embed': {},
+ 'selftext': u"# Welcome to /r/learnprogramming!\n\n## Quick start:\n\n1. New to programming? Not sure how to start learning? See [FAQ - Getting started][faq-start].\n2. Have a question? Our [FAQ][faq] covers many common questions; check that first. Also try searching old posts, either [via google][google] or via reddit's search.\n3. Your question isn't answered in the FAQ? Please read the following:\n\n## Getting debugging help\n\nIf your question is about code, make sure it's **specific** and **provides all information up-front**. Here's a checklist of what to include:\n\n1. A concise but descriptive title.\n2. A [**good description**][wiki-asking] of the problem.\n4.  A [**minimal**, **easily runnable**][wiki-posting], and [**well-formatted**][wiki-formatting] program that demonstrates your problem.\n5. The output you expected, and what you got instead. If you got an error, include the **full** error message.\n\nDo your best to solve your problem before posting. The quality of the answers will be proportional to the amount of effort you put into your post. Note that title-only posts are automatically removed.\n\nAlso see [our full posting guidelines][wiki] and the [subreddit rules][rules]. After you post a question, **DO NOT** delete it!\n\n## Asking conceptual questions\n\nAsking conceptual questions is ok, but please check [our FAQ][faq]/search older posts first.\n\nIf you plan on asking a question similar to one in the FAQ, explain what exactly the FAQ didn't address, and clarify what you're looking for instead.\n\n## Subreddit rules\n\nPlease read [our rules][rules] before posting. If you see somebody breaking a rule, report it! Reports and PMs to the mod team are the quickest ways to bring issues to our attention.\n\n\n  [faq-start]: https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_getting_started\n  [faq]: https://www.reddit.com/r/learnprogramming/wiki/faq\n  [google]: https://www.google.com/#q=site:reddit.com%2Fr%2Flearnprogramming\n  [wiki]: https://www.reddit.com/r/learnprogramming/wiki/index\n  [wiki-asking]: https://www.reddit.com/r/learnprogramming/wiki/index#wiki_asking_questions\n  [wiki-posting]: https://www.reddit.com/r/learnprogramming/wiki/index#wiki_posting_code\n  [wiki-formatting]: https://www.reddit.com/r/learnprogramming/wiki/index#wiki_formatting_code\n  [rules]: https://www.reddit.com/r/learnprogramming/about/rules",
+ 'selftext_html': u'<!-- SC_OFF --><div class="md"><h1>Welcome to <a href="/r/learnprogramming">/r/learnprogramming</a>!</h1>\n\n<h2>Quick start:</h2>\n\n<ol>\n<li>New to programming? Not sure how to start learning? See <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_getting_started">FAQ - Getting started</a>.</li>\n<li>Have a question? Our <a href="https://www.reddit.com/r/learnprogramming/wiki/faq">FAQ</a> covers many common questions; check that first. Also try searching old posts, either <a href="https://www.google.com/#q=site:reddit.com%2Fr%2Flearnprogramming">via google</a> or via reddit&#39;s search.</li>\n<li>Your question isn&#39;t answered in the FAQ? Please read the following:</li>\n</ol>\n\n<h2>Getting debugging help</h2>\n\n<p>If your question is about code, make sure it&#39;s <strong>specific</strong> and <strong>provides all information up-front</strong>. Here&#39;s a checklist of what to include:</p>\n\n<ol>\n<li>A concise but descriptive title.</li>\n<li>A <a href="https://www.reddit.com/r/learnprogramming/wiki/index#wiki_asking_questions"><strong>good description</strong></a> of the problem.</li>\n<li> A <a href="https://www.reddit.com/r/learnprogramming/wiki/index#wiki_posting_code"><strong>minimal</strong>, <strong>easily runnable</strong></a>, and <a href="https://www.reddit.com/r/learnprogramming/wiki/index#wiki_formatting_code"><strong>well-formatted</strong></a> program that demonstrates your problem.</li>\n<li>The output you expected, and what you got instead. If you got an error, include the <strong>full</strong> error message.</li>\n</ol>\n\n<p>Do your best to solve your problem before posting. The quality of the answers will be proportional to the amount of effort you put into your post. Note that title-only posts are automatically removed.</p>\n\n<p>Also see <a href="https://www.reddit.com/r/learnprogramming/wiki/index">our full posting guidelines</a> and the <a href="https://www.reddit.com/r/learnprogramming/about/rules">subreddit rules</a>. After you post a question, <strong>DO NOT</strong> delete it!</p>\n\n<h2>Asking conceptual questions</h2>\n\n<p>Asking conceptual questions is ok, but please check <a href="https://www.reddit.com/r/learnprogramming/wiki/faq">our FAQ</a>/search older posts first.</p>\n\n<p>If you plan on asking a question similar to one in the FAQ, explain what exactly the FAQ didn&#39;t address, and clarify what you&#39;re looking for instead.</p>\n\n<h2>Subreddit rules</h2>\n\n<p>Please read <a href="https://www.reddit.com/r/learnprogramming/about/rules">our rules</a> before posting. If you see somebody breaking a rule, report it! Reports and PMs to the mod team are the quickest ways to bring issues to our attention.</p>\n</div><!-- SC_ON -->',
+ 'spoiler': False,
+ 'stickied': True,
+ 'subreddit': Subreddit(display_name='learnprogramming'),
+ 'subreddit_id': u't5_2r7yd',
+ 'subreddit_name_prefixed': u'r/learnprogramming',
+ 'subreddit_type': u'public',
+ 'suggested_sort': None,
+ 'thumbnail': u'',
+ 'title': u'New? READ ME FIRST!',
+ 'ups': 492,
+ 'url': u'https://www.reddit.com/r/learnprogramming/comments/61oly8/new_read_me_first/',
+ 'user_reports': [],
+ 'view_count': None,
+ 'visited': False}
